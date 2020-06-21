@@ -54,6 +54,7 @@ class MPIIDataset(Dataset):
         image = image.astype(np.float64)
         heat_maps = heat_maps.astype(np.float64)
         return {
+            'image_path': img_path,
             'image': torch.from_numpy(image),
             'heat_maps': torch.from_numpy(heat_maps)
         }
